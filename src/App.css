@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-fluid {
+  background-color: rgb(17, 233, 223);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.container-nav {
+  background-color: teal;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.form-select:focus,
+.form-control:focus {
+  border-color: inherit !important;
+  box-shadow: none !important;
+}
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+.input-group-text {
+  cursor: pointer;
+}
+.card-img-top {
+  width: 100%;
+  height: 100%;
+}
+.card-img {
+  width: 100%;
+  height: 70%;
+}
+.card-product {
+  width: 100%;
+  height: 80vh;
+}
+.card-categories {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+}
+.card-categories a {
+  color: white !important;
+  font-weight: 700 !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-categories a:hover {
+  background-color: teal;
+}
+.card-body-categories {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-title-categories {
+  color: white;
+  font-weight: bold;
+}
+.productcon {
+  position: relative;
+  overflow: hidden;
+}
+.icon-pro {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  right: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+}
+.productcon:hover .icon-pro {
+  /* top: 10%;
+  right: 0; */
+  opacity: 0.8;
+  transition: all 0.5s ease;
+}
+.icon-pro a {
+  color: white;
+  padding: 10px 4px;
+  margin: 6px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.icon-pro a:hover {
+  transform: scale(1.1);
+}
+/* productlist part  */
+
+.pro-img {
+  width: 100%;
+  height: 75vh;
+}
+.input-amount {
+  width: 60px;
+  /* height: 25px; */
+  border-radius: 10px;
+  border: 1px solid teal;
+}
+.input-amount:focus {
+  outline: none;
+}
+/* end productlist part  */
+.register {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+      center;
+  /* background-size:  cover; */
+}
+.error {
+  color: red;
+  text-align: left;
+}
+.cart {
+  background-color: white;
+  position: absolute;
+  border-radius: 30px;
+  right: 20px;
+  top: 100px;
+  z-index: 555;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+  /* text-align: center; */
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 15px;
+}
+.item img {
+  width: 80px;
+  height: 120px;
+  margin: 0px 15px;
+}
+.item p {
+  color: gray;
+  padding: 0;
+  margin: 0;
+}
+.delete {
+  color: red;
+  cursor: pointer;
+}
+.total {
+  padding: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
